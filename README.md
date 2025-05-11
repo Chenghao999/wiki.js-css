@@ -1,3 +1,5 @@
+[查看中文版本](README_ZH.md)
+
 # wiki.js-css
 
 This project provides custom CSS styles for Wiki.js. With these styles, you can beautify and customize the interface of Wiki.js to better meet your personalized needs.
@@ -18,5 +20,5 @@ The main structure of the project is as follows:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/wiki.js-css.git
+git clone https://github.com/Chenghao999/wiki.js-css.git
 ```
