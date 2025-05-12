@@ -220,8 +220,8 @@ i.mdi-file-tree + div:after {
 }
 
 /*** Body Area ***/
-.theme--dark .v-main .contents h1:after {
-    background: linear-gradient(90deg,#64b5f6,#2196f3 10%,rgba(13,71,161,0));
+.theme--dark .v-main .contents h1:after { 
+    background: linear-gradient(90deg,#FF9800,#F57C00 10%, rgba(245, 124, 0, 0));
     background: none;
 }
 .
@@ -243,7 +243,7 @@ i.mdi-file-tree + div:after {
 
 .v-main .contents h3 { 
     margin-top: 20px; 
-    // 移除了 color: #fff !important;
+    color: #616161 !important;
 }
 .contents h3:after {
     content: "";
@@ -277,27 +277,27 @@ i.mdi-file-tree + div:after {
 }
 /* Assume this is the global style or light theme related style area */
 .theme--light {
-    background-color: #fff3cd !important;
+    background-color: #e3f2fd !important;
 }
 
 /* If you find that specific areas also need to modify the background color, you can add rules similar to the following */
 .v-main.theme--light {
-    background-color: #fff3cd !important;
+    background-color: #e3f2fd !important;
 }
 
 .v-content.theme--light {
-    background-color: #fff3cd !important;
+    background-color: #e3f2fd !important;
 }
 
 /* 设置浅色主题下 .comments-main 容器的背景颜色 */
-.theme--light .comments-main {
-    background-color: #fff3cd !important;
+.theme--light .comments-main { 
+    // 移除了 background-color: #e3f2fd !important; 
 }
 .theme--light .table-container table thead th,
 .theme--light .table-container table tbody tr:nth-child(1) td,
 .theme--light .table-container table tbody tr:nth-child(2) td,
 .theme--light .table-container table tbody tr:nth-child(3) td {
-    background-color: #fff3cd !important;
+    background-color: #e3f2fd !important;
 }
 
 /* 添加全局边框样式 */
@@ -306,7 +306,28 @@ i.mdi-file-tree + div:after {
     box-sizing: border-box;
 }
 .theme--light .v-footer.grey.lighten-3 {
-    background-color: #fff3cd !important;
+    background-color: #e3f2fd !important;
+}
+.theme--light .v-breadcrumbs.breadcrumbs-nav {
+    background-color: #e3f2fd !important;
+}
+.theme--light .flex.page-col-sd {
+    background-color: #e3f2fd !important;
+}
+#root .theme--light .v-toolbar__content .v-breadcrumbs.breadcrumbs-nav {
+    background-color: #e3f2fd !important;
+}
+.theme--light .flex.page-col-sd {
+    background-color: #e3f2fd !important;
+}
+.v-main .contents .prismjs { 
+    border: none; 
+    border-radius: 5px; 
+    box-shadow: none; 
+    // 修改背景颜色为 VS Code 深灰色
+    background-color: #1e1e1e; 
+    padding: 1rem 1rem 1rem 3rem; 
+    margin: 1rem 0; 
 }
    
    
