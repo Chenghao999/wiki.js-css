@@ -12,7 +12,7 @@ A Wiki.js override stylesheet inspired by the style of the MediaWiki skin at <mc
 
 ## Compilation
 
-* Clone the project using `git clone https://github.com/AurLemon/wikijs-citizen-styles.git`.
-* The project files are located in `src/styles.scss`. After configuring the runtime environment and package manager, you can build the project using `npm run build-css`. The compiled file will be in `dist/styles.css`.
-* If you want to change the theme color, you can modify the following variables under the `:root` selector in the project file: `--color-primary-override__h: 200; --color-primary-override__s: 55%; --color-primary-override__l: 48%;`. The theme color uses the HSL color system, and these three CSS variables represent the hue, saturation, and lightness of the theme color respectively.
-* If you want to change other colors, you can modify other CSS variables under the `:root` selector. After making the changes, compile the project and apply the styles according to the "Usage" instructions.
+- Clone the project using `git clone https://github.com/AurLemon/wikijs-citizen-styles.git`.
+- The project files are located in `src/styles.scss`. After configuring the runtime environment and package manager, you can build the project using `npm run build-css`. The compiled file will be in `dist/styles.css`.
+- If you want to change the theme color, you can modify the following variables under the `:root` selector in the project file: `--color-primary-override__h: 200; --color-primary-override__s: 55%; --color-primary-override__l: 48%;`. The theme color uses the HSL color system, and these three CSS variables represent the hue, saturation, and lightness of the theme color respectively.
+- If you want to change other colors, you can modify other CSS variables under the `:root` selector. After making the changes, compile the project and apply the styles according to the "Usage" instructions.
