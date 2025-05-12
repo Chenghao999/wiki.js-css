@@ -1,8 +1,518 @@
-:root {
-  --color-primary-override__h: 200;
-  --color-primary-override__s: 55%;
-  --color-primary-override__l: 48%;
-  // 可以添加更多的 CSS 变量
+/*
+ * 作者: Li Chenghao
+ * Author: Li Chenghao
+ */
+/*
+ * 此 CSS 样式参考了 Reess Kennedy 的主题覆盖内容，原始注释如下：
+ * This CSS style refers to the theme overrides by Reess Kennedy. The original comment is as follows:
+ * Theme overrides by Reess Kennedy
+ * 参考链接：https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/
+ * Reference link: https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/
+ */
+/* 导入外部 CSS 文件
+ * Import external CSS file
+ */
+/* @import url('https://www.surgolink.com/externalcss/wiki.css?v=1'); */
+/* 设置内容区域链接颜色
+ * Set the color of links in the content area
+ */
+.v-main .contents a {
+	color: #309cf2 !important;
 }
 
-// 这里可以添加更多的样式
+/*
+Theme overrides by Reess Kennedy
+Reess Kennedy 的主题覆盖内容
+*/
+
+/* https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/ */
+
+/*** 头部区域
+ *** Header Area
+ ***/   
+
+
+
+
+/*** 标题区域
+ *** Title Area
+ ***/ 
+
+/* 不确定如何处理这个区域
+ * 这个区域没有 h1 标签，对 SEO 不太友好？
+ * 你可以缩小这个区域，或者隐藏它并始终使用 h1 标签
+ * 或者将这个区域作为页面标题，并使其更粗更大...
+ * 现在选择更粗更大，因为每次创建新页面都要选择新的 h1 标签很烦人
+ * Not sure what to do with this area.
+ * There is no h1 tag in this area, which is not great for SEO.
+ * You can either minimize this area, hide it and always use an h1 tag.
+ * Or make this the page header and make it bolder and bigger...
+ * Choosing bolder and bigger now because it's annoying to have to choose a new h1 each time you create a new page.
+ */
+.v-application .headline {
+    /* 设置标题字体大小
+     * Set the font size of the headline
+     */
+    font-size: 1.8rem!important;
+    /* 设置标题字母间距
+     * Set the letter spacing of the headline
+     */
+    letter-spacing: normal!important;
+    
+    /* 设置标题字体粗细
+     * Set the font weight of the headline
+     */
+    font-weight: 800;    
+}
+/* 设置页面标题区域的最小高度
+ * Set the minimum height of the page header headings area
+ */
+.page-header-section .page-header-headings {
+    min-height: 100% !important; /* 此区域原本有最小高度，现在消除它 -- 不过不确定在移动端的显示效果
+                                  * This area originally had a minimum height, which is now eliminated. -- Not sure how this will look on mobile though.
+                                  */
+}   
+/* 设置页面编辑快捷方式的位置
+ * Set the position of the page edit shortcuts
+ */
+.page-header-section .page-edit-shortcuts {
+    position: absolute;
+    bottom: 0px; /* 不错的位置
+                  * Nice position
+                  */
+    right: 10px;
+}
+/* 设置页面编辑快捷方式中最后一个按钮的边框和内边距
+ * Set the border and padding of the last button in the page edit shortcuts
+ */
+.page-header-section .page-edit-shortcuts .v-btn:last-child {
+		border: 1px solid #9e9e9e !important;
+		padding: 8px !important;
+}
+/* 设置页面标题区域中编辑快捷方式按钮的边框
+ * Set the border of the edit shortcut buttons in the page header area
+ */
+.page-header-section .page-header-headings .page-edit-shortcuts button {
+	border: 1px solid #ddd !important;
+}
+/** 将主标题颜色设置为白色
+ *** Set the color of the main header to white
+ **/
+.v-application .grey--text.text--lighten-2 {
+    color: #fff !important; 
+    
+    /** 将主标题颜色设置为白色
+     *** Set the color of the main header to white
+     **/!important;
+    /* 设置插入符号颜色
+     * Set the caret color
+     */
+    caret-color: #e0e0e0!important;
+}
+
+/* 设置页面标题区域的高度和内边距
+ * Set the height and padding of the page header section
+ */
+.page-header-section {
+	height: 100% !important; /** 默认高度为 90px，现在将其设置为适应内容大小，以便正确更改内边距
+                              * The default height is 90px. Now set it to fit the size of the content so that the padding can be properly changed.
+                              */
+	padding-top: 30px;
+	padding-bottom: 0px;
+}
+/* 隐藏分隔线
+ * Hide the separator line
+ */
+hr[role="separator"]  {
+	display: none !important;
+	/* 此颜色设置无实际效果，因为已隐藏
+	 * This color setting has no effect because the element is hidden.
+	 */
+	color: yellow;
+}
+
+
+
+/*** 面包屑导航区域
+ *** Breadcrumbs Area
+ ***/ 
+/* 设置非圆形小按钮的高度、最小宽度和内边距
+ * Set the height, minimum width, and padding of non-round small buttons
+ */
+.v-btn:not(.v-btn--round).v-size--small {
+    height: 28px;
+    min-width: 50px;
+    
+    padding: 0 1px !important;
+}
+
+
+/* 设置特定灰色区域的背景颜色和边框颜色
+ * Set the background color and border color of a specific grey area
+ */
+#root .v-application .grey.darken-4-l3 {
+    background-color: transparent !important;
+    border-color: #292929 !important;
+}
+
+/*** 右侧边栏区域
+ *** Right Sidebar Area
+ ***/
+/* 设置右侧边栏的顶部外边距
+ * Set the top margin of the right sidebar
+ */
+.page-col-sd {
+	/* 原本为 -91px，现在稍微上移一点以优化效果
+	 * It was originally -91px, but had to nudge up a bit to improve the effect.
+	 */
+    margin-top: -95px;
+}   
+/* 设置右侧边栏中默认大小芯片的边框半径、字体大小和高度
+ * Set the border radius, font size, and height of default-sized chips in the right sidebar
+ */
+.page-col-sd .v-chip.v-size--default {
+    border-radius: 40px;
+    font-size: 12px;
+    height: 22px;
+}
+
+/* 右侧边栏中的标签样式
+ * Styles for tags in the right sidebar
+ */
+body .page-col-sd .teal.darken-1 {
+    background-color: #2196f36b !important;
+    border-color: #2196f3 !important;
+    color: #fff;
+}
+/* 设置右侧边栏中标签内图标的字体大小
+ * Set the font size of icons inside tags in the right sidebar
+ */
+body .page-col-sd .teal.darken-1 i {
+	font-size: 12px !important;
+}	
+/* 设置特定青色文本的颜色和插入符号颜色
+ * Set the color and caret color of specific teal text
+ */
+.v-application .teal--text.text--lighten-3 {
+    color: #fff !important;
+    caret-color: #fff !important;
+}
+
+
+/* 可能是全局样式？
+ * Might be global styles?
+ */
+
+
+/** 移除页面标题
+ *** Remove the page header
+ **/
+.page-toc-card .overline {
+  display: none;
+}
+
+/* 不确定 xdisplay 是什么，可能是注释掉的代码
+ * Not sure what xdisplay is. It might be commented-out code.
+ */
+.page-toc-card i.v-icon {
+  xdisplay: none !important;
+}	
+/* 移除特定图标的前置内容
+ * Remove the prefix content of a specific icon
+ */
+.page-toc-card .mdi-chevron-right:before {
+    content: "";
+    /* 可能是注释掉的代码
+     * Might be commented-out code.
+     */
+    xdisplay: none;
+}
+/* 移除特定图标的后置内容
+ * Remove the suffix content of a specific icon
+ */
+.page-toc-card .mdi-chevron-right:after {
+	display: none;
+}	
+
+/* 设置右侧边栏的背景颜色
+ * Set the background color of the right sidebar
+ */
+.page-col-sd {
+	/* 可能是注释掉的测试代码
+	 * Might be commented-out test code.
+	 */
+	xbackground: red;
+	background: #171717;
+}
+/* 设置卡片的边框半径、边框和背景颜色
+ * Set the border radius, border, and background color of cards
+ */
+.v-sheet.v-card {
+    border-radius: 0px !important;
+    border: 0px solid #fff;
+	background: #171717;
+    background-color: #171717;
+    
+    /* 可能是注释掉的测试代码
+     * Might be commented-out test code.
+     */
+    xbackground: red;
+    background: #171717;
+}
+/* 设置暗色主题卡片的背景颜色和文字颜色
+ * Set the background color and text color of dark-themed cards
+ */
+.theme--dark.v-card {
+    /* 可能是注释掉的测试代码
+     * Might be commented-out test code.
+     */
+    xbackground-color: red !important;
+    background-color: #171717 !important;
+    color: #fff;
+}
+/* 移除非描边卡片的阴影
+ * Remove the shadow of non-outlined cards
+ */
+.v-sheet.v-card:not(.v-sheet--outlined) {
+    box-shadow: none !important;
+}
+/* 设置紧凑列表项的最小高度
+ * Set the minimum height of dense list items
+ */
+.v-list--dense .v-list-item, .v-list-item--dense {
+    min-height: 20px !important;
+}
+/* 设置特定类的左右内边距
+ * Set the left and right padding of a specific class
+ */
+.v-application .px-3 {
+    padding-right: 12px!important;
+    padding-left: 5px!important;
+}
+/* 隐藏右侧边栏中的工具栏
+ * Hide the toolbar in the right sidebar
+ */
+.page-col-sd .v-toolbar {
+	display: none !important;
+}
+/* 设置暗色主题列表的背景颜色和文字颜色
+ * Set the background color and text color of dark-themed lists
+ */
+.theme--dark.v-list {
+    background: #1e1e1e;
+    background-color: #171717 !important;    
+    color: #fff;
+}
+
+/** 页脚文本无需背景颜色，且应调暗
+ *** No need for background on footer text and should be dimmed
+ **/
+.v-application .grey.darken-3 {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    
+   color: #9e9e9e !important;
+}
+
+
+/** 隐藏大讨论按钮
+ *** Hide the big discussion button
+ **/
+.page-comments-card button:nth-child(1) {
+	display: none;
+
+	
+}
+/* 设置特定类的左外边距
+ * Set the left margin of a specific class
+ */
+.page-comments-card .ml-2 {
+	margin-left: 0px !important;
+}	
+/** 覆盖大写样式
+ *** Override the uppercase style
+ **/
+.v-application .overline {
+	text-transform: none !important;	
+}	
+
+
+
+/*** 左侧边栏区域
+ *** Left Sidebar Area
+ ***/
+
+/** 这些图标原本是白色，尝试将它们改为“Mac 文件夹蓝色”
+ * 然后也更改了文档图标和所有图标，不同颜色效果更好
+ * These icons were originally white. Trying to make them "Mac folder blue".
+ * Then also changed the document icons and all icons. Different colors look better.
+ **/
+
+/** 仅影响左侧边栏的图标颜色
+ *** Only affect the icon colors in the left sidebar
+ **/
+.v-navigation-drawer__content .theme--dark.v-icon.mdi-folder {
+    color: #0886da !important;
+}
+/* 设置左侧边栏中文本框图标的颜色
+ * Set the color of text box icons in the left sidebar
+ */
+.v-navigation-drawer__content .theme--dark.v-icon.mdi-text-box {
+    color: #9e9e9e !important;
+}
+
+/** 移除图标和链接之间的较大间距
+ *** Remove the large space between icons and links
+ **/
+.v-application--is-ltr .v-list-item__avatar:first-child, 
+.v-application--is-rtl .v-list-item__action:last-of-type:not(:only-child), 
+.v-application--is-rtl .v-list-item__avatar:last-of-type:not(:only-child), 
+.v-application--is-rtl .v-list-item__icon:last-of-type:not(:only-child) 
+{
+    margin-right: 7px !important;
+}
+
+
+/* 移除“主页”按钮
+ * Remove the "Home" button
+ */
+button[aria-label="Home"] {
+	display: none !important;
+}
+/* 移除导航按钮的左内边距
+ * Remove the left padding from the navigation button
+ */
+.v-navigation-drawer__content button:nth-child(2) {
+	padding-left: 0px;
+	margin-left: 0px !important;
+}
+/* 在“浏览”后添加“页面”
+ * 也可以是“内容”、“文件夹”或“维基”... 不确定
+ * Added "Pages" after "Browse".
+ * Could be "Content", "Folders", or "Wiki"... Not sure.
+ */
+i.mdi-file-tree + div:after {
+	content: " Pages";	
+}
+
+
+
+/** 更改看起来像非标准导航或地图相关的怪异大图标 -- 不确定
+ *** Change the weird large icon that looks like some non-standard navigation or atlas related thing -- not sure
+ **/
+.mdi-navigation:before {
+    content: "←";
+}
+
+/*** 主体区域
+ *** Body Area
+ ***/
+/* 设置暗色主题下主内容区域 h1 标签的后置背景
+ * Set the background after the h1 tag in the main content area under the dark theme
+ */
+.theme--dark .v-main .contents h1:after {
+    background: linear-gradient(90deg,#64b5f6,#2196f3 10%,rgba(13,71,161,0));
+    
+    background: none;
+}
+.
+
+/* 设置暗色主题下主内容区域 h2 标签的颜色
+ * Set the color of the h2 tag in the main content area under the dark theme
+ */
+.theme--dark .v-main .contents h2 {
+	color: #fff;
+	/* 可能是注释掉的代码
+	 * Might be commented-out code.
+	 */
+	xborder-bottom: 1px solid #ddd;
+}
+/* 设置暗色主题下主内容区域 h2 标签的后置背景
+ * Set the background after the h2 tag in the main content area under the dark theme
+ */
+.theme--dark .v-main .contents h2:after {
+    background: linear-gradient(90deg,#e0e0e0,rgba(97,97,97,0));
+    background: none;
+}
+/* 设置主内容区域块引用内段落的上内边距
+ * Set the top padding of paragraphs inside blockquotes in the main content area
+ */
+.v-main .contents blockquote p {
+    padding: 1rem 0 0;	
+}	
+/* 设置主内容区域段落的上下内边距
+ * Set the top and bottom padding of paragraphs in the main content area
+ */
+.v-main .contents p {
+	/* 减小顶部内边距并添加底部内边距
+	 * 仅顶部内边距感觉很奇怪
+	 * Smaller top padding and added bottom padding.
+	 * Just top padding felt weird.
+	 */
+    padding: .5rem 0 .5rem 0;
+}
+
+
+
+/* 设置主内容区域 h3 标签的顶部外边距和颜色
+ * Set the top margin and color of the h3 tag in the main content area
+ */
+.v-main .contents h3 {
+	margin-top: 20px;
+	color: #fff !important;
+}
+/* 设置主内容区域 h3 标签的后置内容和背景
+ * Set the content and background after the h3 tag in the main content area
+ */
+.contents h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,#9e9e9e,hsla(0,0%,62%,0) 90%);
+    
+    background: none !important;
+}
+
+/* 设置主内容区域无序列表的上下内边距和左内边距
+ * Set the top, bottom, and left padding of unordered lists in the main content area
+ */
+.v-main .contents ul {
+  padding-top: .5rem !important;
+  padding-left: 1rem !important;
+}
+/* 设置主内容区域特定无序列表项的前置内容和颜色
+ * Set the prefix content and color of specific list items in the main content area
+ */
+.v-main .contents ul:not(.tabset-tabs):not(.contains-task-list)>li:before {
+    position: absolute;
+    left: -.8rem;
+    color: #757575;
+    width: 1.15rem;
+    content: "•";
+    color: orange;
+    font-weight: 900 !important;
+}
+/* 设置特定类的行高、字体大小、字体粗细和字母间距
+ * Set the line height, font size, font weight, and letter spacing of a specific class
+ */
+#root .v-application .overline {
+    line-height: 1rem;
+    font-size: .625rem!important;
+    font-weight: 400;
+    
+    /* 移除字母间距
+     * 字母间距之前用于下划线效果
+     * 现在感觉很随意，有点刻意
+     * Removed spacing between letters.
+     * Spacing between letters was used for the underline effect before.
+     * Now it feels like it's random and trying too hard.
+     */
+    letter-spacing: 0em!important;
+}
+   
+   
+   
+
