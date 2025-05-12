@@ -1,0 +1,10 @@
+{
+  "name": "wikijs-citizen-styles",
+  "version": "1.0.0",
+  "scripts": {
+    "build-css": "sass src/styles.scss dist/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.0.0"
+  }
+}
