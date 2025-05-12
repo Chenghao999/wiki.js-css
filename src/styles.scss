@@ -512,6 +512,19 @@ i.mdi-file-tree + div:after {
      */
     letter-spacing: 0em!important;
 }
+/* 假设这里是全局样式或者浅色主题相关样式区域 */
+.theme--light {
+    background-color: #fff3cd !important;
+}
+
+/* 如果你发现特定区域也需要修改背景颜色，可以添加类似下面的规则 */
+.v-main.theme--light {
+    background-color: #fff3cd !important;
+}
+
+.v-content.theme--light {
+    background-color: #fff3cd !important;
+}
    
    
    
